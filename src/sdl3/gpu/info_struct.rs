@@ -496,7 +496,7 @@ impl<'a> BufferBinding<'a> {
         Default::default()
     }
 
-    /// The buffer to bind. Must have been created with [`BufferUsageFlags::VERTEX`](super::BufferUsageFlags::VERTEX) for [`RenderPass::bind_vertex_buffers`](super::RenderPass::bind_vertex_buffers), or [`BufferUsageFlags::INDEX`](super::BufferUsageFlags::INDEX) for [`RenderPass::bind_index_buffer`](super::RenderPass::bind_index_buffer).
+    /// The buffer to bind. Must have been created with [`BufferUsage::VERTEX`](super::BufferUsage::VERTEX) for [`RenderPass::bind_vertex_buffers`](super::RenderPass::bind_vertex_buffers), or [`BufferUsage::INDEX`](super::BufferUsage::INDEX) for [`RenderPass::bind_index_buffer`](super::RenderPass::bind_index_buffer).
     pub fn with_buffer(mut self, buffer: &'a Buffer) -> Self {
         self.inner.buffer = buffer.ll();
         self
@@ -1069,7 +1069,7 @@ impl<'a> StorageBufferReadWriteBinding<'a> {
         Default::default()
     }
 
-    /// The buffer to bind. Must have been created with [`BufferUsageFlags::COMPUTE_STORAGE_WRITE`](super::BufferUsageFlags::COMPUTE_STORAGE_WRITE).
+    /// The buffer to bind. Must have been created with [`BufferUsage::COMPUTE_STORAGE_WRITE`](super::BufferUsage::COMPUTE_STORAGE_WRITE).
     pub fn with_buffer(mut self, buffer: &'a Buffer) -> Self {
         self.inner.buffer = buffer.ll();
         self

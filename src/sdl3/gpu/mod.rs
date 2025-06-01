@@ -22,8 +22,8 @@ pub use command_buffer::{CommandBuffer, ComputePass, CopyPass, Fence, RenderPass
 
 mod enums;
 pub use enums::{
-    BlendFactor, BlendOp, BufferUsageFlags, ColorComponentFlags, CompareOp, CullMode, FillMode,
-    Filter, FrontFace, IndexElementSize, LoadOp, PrimitiveType, SampleCount, SamplerAddressMode,
+    BlendFactor, BlendOp, BufferUsage, ColorComponentFlags, CompareOp, CullMode, FillMode, Filter,
+    FrontFace, IndexElementSize, LoadOp, PrimitiveType, SampleCount, SamplerAddressMode,
     SamplerMipmapMode, ShaderFormat, ShaderStage, StencilOp, StoreOp, TextureFormat, TextureType,
     TextureUsage, TransferBufferUsage, VertexElementFormat, VertexInputRate,
 };

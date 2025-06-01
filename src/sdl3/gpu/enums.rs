@@ -222,8 +222,8 @@ pub enum VertexInputRate {
 }
 
 #[derive(Default, Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
-pub struct BufferUsageFlags(pub sys::gpu::SDL_GPUBufferUsageFlags);
-impl BufferUsageFlags {
+pub struct BufferUsage(pub sys::gpu::SDL_GPUBufferUsageFlags);
+impl BufferUsage {
     pub const VERTEX: Self = Self(sys::gpu::SDL_GPU_BUFFERUSAGE_VERTEX);
     pub const INDEX: Self = Self(sys::gpu::SDL_GPU_BUFFERUSAGE_INDEX);
     pub const INDIRECT: Self = Self(sys::gpu::SDL_GPU_BUFFERUSAGE_INDIRECT);
@@ -233,7 +233,7 @@ impl BufferUsageFlags {
     pub const COMPUTE_STORAGE_WRITE: Self =
         Self(sys::gpu::SDL_GPU_BUFFERUSAGE_COMPUTE_STORAGE_WRITE);
 }
-impl_with!(bitwise_and_or BufferUsageFlags);
+impl_with!(bitwise_and_or BufferUsage);
 
 pub type TransferBufferUsage = sys::gpu::SDL_GPUTransferBufferUsage;
 

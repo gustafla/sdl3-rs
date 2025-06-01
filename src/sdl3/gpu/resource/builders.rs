@@ -14,7 +14,7 @@ use crate::gpu::{SamplerCreateInfo, TextureCreateInfo};
 use crate::Error;
 
 use super::super::{
-    BufferUsageFlags, ComputePipeline, DepthStencilState, FillMode, GraphicsPipeline,
+    BufferUsage, ComputePipeline, DepthStencilState, FillMode, GraphicsPipeline,
     GraphicsPipelineTargetInfo, PrimitiveType, RasterizerState, Shader, ShaderFormat, ShaderStage,
     TransferBuffer, TransferBufferUsage, VertexInputState,
 };
@@ -228,7 +228,7 @@ impl<'gpu> BufferBuilder<'gpu> {
         }
     }
 
-    pub fn with_usage(mut self, value: BufferUsageFlags) -> Self {
+    pub fn with_usage(mut self, value: BufferUsage) -> Self {
         self.inner.usage = value.0;
         self
     }
