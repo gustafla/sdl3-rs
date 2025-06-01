@@ -235,8 +235,7 @@ pub fn main() -> Result<(), Box<dyn std::error::Error>> {
                 .with_vertex_buffer_descriptions(&[VertexBufferDescription::new()
                     .with_slot(0)
                     .with_pitch(size_of::<Vertex>() as u32)
-                    .with_input_rate(VertexInputRate::Vertex)
-                    .with_instance_step_rate(0)])
+                    .with_input_rate(VertexInputRate::Vertex)])
                 .with_vertex_attributes(&[
                     VertexAttribute::new()
                         .with_format(VertexElementFormat::Float3)

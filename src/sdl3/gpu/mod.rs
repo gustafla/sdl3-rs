@@ -30,12 +30,12 @@ pub use enums::{
 
 mod info_struct;
 pub use info_struct::{
-    BufferBinding, BufferRegion, ColorTargetBlendState, ColorTargetDescription, ColorTargetInfo,
-    DepthStencilState, DepthStencilTargetInfo, GraphicsPipelineTargetInfo, RasterizerState,
-    SamplerCreateInfo, StencilOpState, StorageBufferReadWriteBinding,
-    StorageTextureReadWriteBinding, TextureCreateInfo, TextureRegion, TextureSamplerBinding,
-    TextureTransferInfo, TransferBufferLocation, VertexAttribute, VertexBufferDescription,
-    VertexInputState,
+    BufferBinding, BufferLocation, BufferRegion, ColorTargetBlendState, ColorTargetDescription,
+    ColorTargetInfo, DepthStencilState, DepthStencilTargetInfo, GraphicsPipelineTargetInfo,
+    IndirectDispatchCommand, RasterizerState, SamplerCreateInfo, StencilOpState,
+    StorageBufferReadWriteBinding, StorageTextureReadWriteBinding, TextureCreateInfo,
+    TextureLocation, TextureRegion, TextureSamplerBinding, TextureTransferInfo,
+    TransferBufferLocation, VertexAttribute, VertexBufferDescription, VertexInputState,
 };
 
 use sys::gpu::{
